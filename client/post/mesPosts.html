@@ -1,0 +1,6 @@
+<template name="mesPosts">
+	<h2>Liste de mes postes:</h2>
+	{{#each mesposts}}
+		<li><a href="/postId/{{_id}}">{{ title }}</a></li>
+	{{/each}}
+</template>

@@ -1,0 +1,41 @@
+<template name="register">
+    <h1 class="text-center" >Enregistrement</h1>
+    <form>
+        <h3>S'identifier:</h3>
+        
+        <ul id="fieldlist">
+
+            <li>
+                <label for="username" class="required">Username:</label><br/>
+                <input id="username" type="text" class="k-textbox" name="username" placeholder="username" required validationMessage="Enter {0}"/>
+            </li>
+            <li>
+                <label for="email" class="required">Adresse e-mail:</label><br/>
+                <input id="email" type="text" class="k-textbox" name="email" placeholder="e-mail" required validationMessage="Enter {0}"/>
+            </li>
+            <li>
+                <label for="password" class="required">Password:</label><br/>
+                <input id="password" type="text" class="k-textbox" name="password" placeholder="mot de passe" required validationMessage="Enter {0}"/>
+            </li>
+            <li>
+                <label for="confirmedPassword" class="required">Confirmation:</label><br/>
+                <input id="confirmedPassword" type="text" class="k-textbox" name="confirmedPassword" placeholder="mot de passe" required validationMessage="Enter {0}"/>
+            </li>
+            <li>
+                <label for="firstname" class="required">Prénom:</label><br/>
+                <input id="firstname" type="text" class="k-textbox" name="firstname" placeholder="Prénom" required validationMessage="Enter {0}"/>
+            </li>
+            <li>
+                <label for="nom" class="required">Nom:</label><br/>
+                <input id="nom" type="text" class="k-textbox" name="nom" placeholder="Nom" required validationMessage="Enter {0}"/>
+            </li>
+            <li>
+                <label for="chief" class="required">Superviseur:</label><br/>
+                <input id="chief" type="text" class="k-textbox" name="chief" placeholder="username" required validationMessage="Enter {0}"/>
+            </li>
+            <li class="confirm">
+                <button class="k-button k-primary" type="submit">S'enregistrer</button>
+            </li>
+        </ul>
+    </form>
+</template>

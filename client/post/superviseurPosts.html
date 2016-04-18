@@ -1,0 +1,6 @@
+<template name="superviseurPosts">
+	<h2>Postes que je supervise:</h2>
+	{{#each otherposts}}
+		<li><a href="/postId/{{_id}}">{{ title }}</a>, par: <em>{{ author }}</em></li>
+	{{/each}}
+</template>

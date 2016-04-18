@@ -1,0 +1,31 @@
+<template name='postId'>
+	<h2>Titre: {{title}}</h2>
+	<p>, par {{author}} le {{formatDate createdAt}}</p>
+	<h4>Contenu:</h4>
+	<p class="content">{{content}}</p>
+	{{#if rightPhase}}
+		<a href='/postId/{{_id}}/edit'>Modifier</a>
+	{{else}}
+
+		
+		{{#if commentAuthor}}
+			<h4>Commentaires de {{author}}:</h4>
+			<p class="content">{{commentAuthor}}</p>
+		{{else}}
+			<h4>Pas de commentaire de {{author}}</h4>
+		{{/if}}
+
+		
+
+		{{#if commentValidator}}
+			<h4>Commentaires de {{validator}}:</h4>
+			<p class="content">{{commentValidator}}</p>
+		{{else}}
+			<h4>Pas de commentaire de {{validator}}</h4>
+		{{/if}}
+
+		<p>Le document est: {{valid}}.</p>
+
+	{{/if}}
+			
+</template>

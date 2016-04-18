@@ -1,0 +1,25 @@
+<template name="layout">
+	<header>
+		<h1 class="app">
+        	MyApp
+    	</h1>
+
+		{{#if currentUser}}
+			<a class="logout">log out</a>
+			<a class="compte" href="{{pathFor route='compte'}}">Compte</a>
+			<p class="username">Utilisateur: {{currentUser.username}}</p>
+			<p class="chief">Superviseur: {{currentUser.chief}}</p>
+		{{else}}
+			<a class="register" href="{{pathFor route='register'}}">sign up</a>
+			<a class="login" href="{{pathFor route='login'}}">sign in</a>
+		{{/if}}
+	</header>
+	<menu>
+		{{#if currentUser}}
+			{{>menu}}
+		{{/if}}
+	</menu>
+	<body>
+		{{>yield}}
+	</body>
+</template>

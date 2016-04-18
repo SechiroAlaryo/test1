@@ -1,0 +1,27 @@
+<template name='postIdEdit'>
+	<h2>Titre: {{title}}</h2>
+	<p>, par {{author}} le {{formatDate createdAt}}</p>
+	<h4>Contenu:</h4>
+	
+	<form>
+		{{#if authorTrue}}
+			{{content}}
+			<p class="content">Mes commentaires:</p>
+			<textarea name="commentAuthor" placeholder="un commentaire">{{commentAuthor}}</textarea>
+		{{/if}}
+
+		{{#if validatorTrue}}
+			<textarea name="contenu" placeholder="Bhou!">{{content}}</textarea>
+			<p>Mes commentaires:</p>
+			<textarea name="commentValidator" placeholder="un commentaire">{{commentValidator}}</textarea>
+			<p>valider:</p>
+			<input type="radio" name="valid" value="valide"> 	Post valide<br>
+  			<input type="radio" name="valid" value="non valide"> Post invalide<br>
+
+		{{/if}}
+		<p>
+			<button type="submit">Modifier</button>
+		</p>
+	</form>
+	
+</template>

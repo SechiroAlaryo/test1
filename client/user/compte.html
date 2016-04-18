@@ -1,0 +1,31 @@
+<template name="compte">
+	<form>
+        <h3>Mon compte</h3>
+            
+            {{#with currentUser}}
+
+                <p>Pseudo:<br/>
+                <input type="text" name="username" placeholder="username" value="{{username}}" /></p>
+
+                <!--
+                <p>Adresse e-mail:<br/>
+                <input type="email" name="email" placeholder="e-mail" value="{{emails.[0].address}}" /></p>
+                -->
+                <p>Adresse e-mail:<br/>
+                {{emails.[0].address}}</p>
+
+                <p>Prénom: <br/>
+                <input type="text" name="firstname" placeholder="prénom" value="{{firstname}}" /></p>
+
+                <p>Nom: <br/>
+                <input type="text" name="lastname" placeholder="nom" value="{{lastname}}" /></p>
+
+                <p>Superviseur: <br/>
+                <input type="text" name="chief" placeholder="supervisuer username" value="{{chief}}" /></p>
+                
+            {{/with}}
+
+            <br/>
+            <button type="submit">Modifier</button>
+    </form>
+</template>
